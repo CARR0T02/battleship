@@ -18,7 +18,7 @@ const GameboardProto = {
 
   // Logs the tile to shots. If it hits, remove the tile from shipTiles and log the hit to the ship.
   receiveAttack: function (index) {
-    this.shots.add(index);
+    this.shotsReceived.add(index);
     if (!this.shipTiles.has(index)) {
       return false;
     }
@@ -36,7 +36,7 @@ const GameboardProto = {
 const Gameboard = function (boardSize = 7) {
   const Gameboard = Object.create(GameboardProto);
   Gameboard.shipTiles = new Map();
-  Gameboard.shots = new Set();
+  Gameboard.shotsReceived = new Set();
   Gameboard.size = boardSize;
   return Gameboard;
 };

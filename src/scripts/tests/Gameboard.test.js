@@ -32,7 +32,7 @@ describe('Gameboard', () => {
 
   test('tracks all attacks', () => {
     const testAttacks = new Set([3, 17, 47, 1]);
-    expect(testBoard.shots).toEqual(testAttacks);
+    expect(testBoard.shotsReceived).toEqual(testAttacks);
   });
 
   test('shows that NOT all ships have sunk', () => {
