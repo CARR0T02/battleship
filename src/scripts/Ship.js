@@ -14,10 +14,10 @@ const createShip = function (length) {
   if (length <= 0) {
     throw new Error(`Invalid length given for ship: ${length}`);
   }
-  let ship = Object.create(protoShip);
-  ship.hitsTaken = 0;
-  ship.length = length;
-  return ship;
+  let Ship = Object.create(protoShip);
+  Ship.hitsTaken = 0;
+  Ship.length = length;
+  return Ship;
 };
 
 export default createShip;
