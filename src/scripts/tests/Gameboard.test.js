@@ -26,7 +26,7 @@ describe('Gameboard', () => {
   });
 
   test('receiveAttack on a ship', () => {
-    expect(testBoard.receiveAttack(1)).toBe(true);
+    expect(testBoard.receiveAttack(1)).toBe(horShip);
     expect(horShip.hitsTaken).toBe(1);
   });
 

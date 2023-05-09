@@ -25,7 +25,7 @@ const GameboardProto = {
     let ship = this.shipTiles.get(index);
     ship.hit();
     this.shipTiles.delete(index);
-    return true;
+    return ship;
   },
 
   isAlive: function () {
