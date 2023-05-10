@@ -20,9 +20,9 @@ describe('Gameboard', () => {
   });
 
   test('receiveAttack on an empty tile', () => {
-    expect(testBoard.receiveAttack(3)).toBe(false);
-    expect(testBoard.receiveAttack(17)).toBe(false);
-    expect(testBoard.receiveAttack(47)).toBe(false);
+    expect(testBoard.receiveAttack(3)).toBe(null);
+    expect(testBoard.receiveAttack(17)).toBe(null);
+    expect(testBoard.receiveAttack(47)).toBe(null);
   });
 
   test('receiveAttack on a ship', () => {

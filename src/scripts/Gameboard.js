@@ -50,7 +50,7 @@ const GameboardProto = {
   receiveAttack: function (index) {
     this.shotsReceived.add(index);
     if (!this.shipTiles.has(index)) {
-      return false;
+      return null;
     }
     let ship = this.shipTiles.get(index);
     ship.hit();
