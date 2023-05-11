@@ -31,8 +31,10 @@ describe('Gameboard', () => {
   });
 
   test('tracks all attacks', () => {
-    const testAttacks = new Set([3, 17, 47, 1]);
-    expect(testBoard.shotsReceived).toEqual(testAttacks);
+    const testAttacks = [3, 17, 47, 1];
+    for (const index of testAttacks) {
+      expect(testBoard.shotsReceived.has(index)).toEqual(true);
+    }
   });
 
   test('shows that NOT all ships have sunk', () => {
