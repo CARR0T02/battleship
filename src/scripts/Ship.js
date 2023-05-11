@@ -17,7 +17,6 @@ const createShip = function (length) {
   let Ship = Object.create(protoShip);
   Ship.hitsTaken = 0;
   Ship.length = length;
-  Ship.location = [];
   return Ship;
 };
 

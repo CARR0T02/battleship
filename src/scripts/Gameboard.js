@@ -19,7 +19,6 @@ const GameboardProto = {
     }
     for (const tile of tiles) {
       this.shipTiles.set(tile, ship);
-      ship.location.push(tile);
     }
     return true;
   },
@@ -43,7 +42,6 @@ const GameboardProto = {
     }
     for (const tile of tiles) {
       this.shipTiles.set(tile, ship);
-      ship.location.push(tile);
     }
     return true;
   },
