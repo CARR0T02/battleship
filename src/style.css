@@ -1,0 +1,158 @@
+:root {
+  --clr-primary-100: ;
+  --clr-primary-200: ;
+  --clr-primary-300: ;
+  --clr-primary-400: ;
+  --clr-primary-500: ;
+  --clr-primary-600: ;
+  --clr-primary-700: ;
+
+  --clr-light-100: ;
+  --clr-light-200: ;
+  --clr-light-300: ;
+  --clr-light-400: ;
+  --clr-light-500: ;
+  --clr-light-600: ;
+  --clr-light-700: ;
+
+  --clr-alt-100: ;
+  --clr-alt-200: ;
+  --clr-alt-300: ;
+  --clr-alt-400: ;
+  --clr-alt-500: ;
+  --clr-alt-600: ;
+  --clr-alt-700: ;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: ;
+  --fw-semi-bold: ;
+  --fw-bold: ;
+
+  --fs-300: 0.5rem;
+  --fs-400: 0.75rem;
+  --fs-500: 1rem;
+  --fs-600: 1.5rem;
+  --fs-700: 2rem;
+  --fs-800: 2.5rem;
+
+  --tile-size: 5rem;
+  --shot-size: 2rem;
+  --board-size: 7;
+}
+
+/* START OF RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* Remove default margin, padding and fix font */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/* Allow percentage-based heights in the application */
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  Add accessible line-height
+  Improve text rendering
+*/
+body {
+  line-height: 1.5;
+}
+/* Improve media default */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* Remove list styles on ul and ol elements with a list role */
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+/* END OF RESET */
+#main {
+  padding: var(--fs-800);
+}
+
+#game-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-board,
+.opp-board {
+  display: grid;
+  grid-auto-rows: var(--tile-size);
+  grid-auto-columns: var(--tile-size);
+  grid-template-columns: repeat(var(--board-size), var(--tile-size));
+  direction: rtl;
+
+  /* grid-template-columns: var(--tile-size); */
+  /* width: var(--board-size); */
+}
+
+.none {
+  display: none;
+}
+
+.tile {
+  display: flex;
+  border: 1px solid black;
+  background-color: #6997d3;
+  /* height: var(--tile-size);
+  width: var(--tile-size); */
+}
+
+.opp-board > .tile:hover:not([disabled]) {
+  background-color: aqua;
+  cursor: pointer;
+}
+
+.shot {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--shot-size);
+  height: var(--shot-size);
+  border-radius: 50%;
+}
+
+.ship {
+  background-color: #74f390;
+}
+
+.miss {
+  background-color: #727272;
+}
+
+.hit {
+  background-color: #ec4545;
+}
+
+.sunk {
+  background-color: rgb(97, 1, 153);
+}
