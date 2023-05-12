@@ -26,7 +26,6 @@ const Player = function (name, boardSize = 7) {
   const Player = Object.create(PlayerProto);
   Player.board = Gameboard(boardSize);
   Player.name = name;
-
   return Player;
 };
 
